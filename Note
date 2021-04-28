@@ -1,0 +1,18 @@
+Concept
+
+- "key" in tag <li> will have React know what list item should be re-render. 
+https://reactjs.org/tutorial/tutorial.html#picking-a-key
+
+- Why Immutability Is Important?
+Because with data mutate like array, object, function when we clone a mutate data which copy only reference of array without value of the array.
+So we should use .slice() or spread to clone a mutate data. But I won't effect with object or array which have more levels.
+Because it's shallow copy(copy only one level of array)
+
+Error:
+
+1. setState an object in React Hook but UIs aren't re-render.
+
+2. clone an array but when changed attribute in array
+
+Solve:
+1 vs 2: clone another object and making on this.
